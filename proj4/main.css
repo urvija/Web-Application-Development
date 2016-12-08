@@ -1,0 +1,437 @@
+* {
+    margin: 0; 
+    padding: 0;
+}
+
+html, body {
+    min-width: 900px;
+	height: 97%;
+    background-image: url(images/background_img.jpg);
+   	font-family: "Trebuchet MS", Helvetica, Verdana, sans-serif; 
+  	color: #67463B; 
+}    
+ 
+#top_level {
+    display: block;
+    top: 0px;
+    height: auto;
+    width: 100%;
+	position: fixed;
+	z-index: +10;
+}
+
+#heading {
+    border: 1px solid black;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    background-color: #AEAEAE;
+    margin-bottom: -18px;
+    min-width: 900px;
+}
+
+#headingname {
+    display: block;
+    height: 50px;
+    margin: auto;
+}
+
+#counter {
+    position: absolute;
+    top: 5px;
+    right: 30px;
+}  
+
+.cur_pointer {
+  	cursor: pointer;
+}
+
+.floatright {
+    float: right;
+}
+
+.cart_number {
+  	position: absolute;
+  	bottom: 10px;
+  	right: 35px;
+  	margin-right: 10px;
+	cursor: pointer;
+	font-size: x-large;
+	color: black;
+}
+
+#navigation {
+    position: relative;
+    height: auto;
+    background-color: #AEAEAE;
+    border: 1px solid black;
+    text-align: center;
+    min-width: 900px;
+}
+
+#navigation li {
+    display: inline; 
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 25px;
+    line-height: 150%;
+}
+
+#navigation li a {
+    text-decoration: none;
+    font-weight: bold;
+   	color: #67463B;
+}
+
+#navigation li a:hover {
+    color:white;  
+}
+
+#container {
+    background-color: #AEAEAE;
+	margin-top: 150px;
+	margin-bottom: 50px;
+	margin-right: 40px;
+	margin-left: 40px;
+    border-radius: 25px;
+    border: 5px solid #67463B;
+    min-height: 100%;
+    min-width: 900px;
+    height: auto;
+}
+
+#footer {
+	margin: 20px;
+	text-align:center;
+}
+
+/*============== index.html ==========*/
+
+h3 {
+    text-align: center;
+    margin: 17px 25px 17px 25px; 
+    font-size: 140%;
+} 
+
+.homepage {
+	text-align:center;
+}
+
+.chocolate {
+	margin: 15px;
+	border: 1px solid black;
+	border-radius:30px
+}
+
+/*=========== aboutus.html =============*/
+
+p {
+	padding: 10px 25px 10px 25px; 
+	text-align: justify;
+	line-height: 1.5em;
+	font-size: larger;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 170%;
+}   
+
+.clear_it {
+    clear: both;
+}
+
+#aboutus {
+    padding: 25px;
+}
+   
+#aboutus img {
+    float: right;
+    width: 500px;
+ 	margin: -5px 25px 10px 25px;
+    border: 1px solid black;
+	border-radius: 10px;
+}
+ 
+/*=========== contact.html =============*/
+
+.address {
+	text-align: center;
+	font-size: 120%;
+}
+
+.contact {
+	text-align: center;
+	padding: 25px 0 30px 0;
+	font-size: 200%;
+}
+
+h1 {
+    text-align: center;
+    margin: 10px 0 20px 0;
+    padding: 22px 0 22px 0;
+    width: 100%;
+    font-size: 200%;
+} 
+
+/*=========== products.html =============*/
+
+#productNav ul {
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 30px;
+}
+    
+#productNav li {
+    display: inline;
+    margin-left: -6px; 
+    background-color: #67463B;  
+    text-decoration: none;
+    padding: 8px 20px 8px 20px;
+    font-weight: bold;
+    border: 2px solid #67473B;
+    color:  #FFF0DA;
+}                 
+
+#productNav li:hover {
+    color: #67473B;
+    background-color: #FFF0DA;
+    cursor: pointer;
+}
+
+.dialogbox_qty {
+	text-align: center;
+	margin-top: 25px;
+	font-size: 100%;
+}
+
+.dialogbox_buttons {
+  	text-align: center;
+  	margin-top: 25px;
+}
+
+/*=========== products.js =============*/
+
+h5 {
+  	text-align: center;
+  	margin-top: 20px;
+    font-size: 100%;
+}
+
+h2.titlesofproducts {
+    text-align: center; 
+    font-size: 35px;
+}
+
+.displayTable {
+    width: auto;
+    border-spacing: 0;
+    border-collapse: collapse; 
+    margin-top: 20px;	
+	margin-bottom: 30px;	
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid black;
+}
+
+.price { 
+    width: 20px;
+    text-align: center;
+}
+
+.description {
+    width: 500px;
+	overflow: auto;
+}
+
+th {	
+	background-color: #67463B;
+    padding: 5px 10px 5px 10px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+td {	
+    padding: 10px 10px 10px 10px; 
+    font-size: 18px;
+	border: 1px solid black;
+}
+
+/*=========== order_page.html =============*/
+
+#totals {
+  	position: relative;
+  	margin-top: 15px;
+ 	margin-right: 15px;
+  	width: 300px;
+  	height: 200px;
+  	float: right;
+  	font-size: 90%;
+}
+
+#items {
+}
+
+/** form inside order_page.html **/
+
+.floatleft {
+    float: left;
+}
+
+#formcolumn {
+	text-align: left;
+	line-height: 1.5em;
+	font-size: larger;
+}
+
+li.checkout {
+  	text-align: left;
+  	display: block;
+}
+
+ul {
+    list-style-type: none;
+}
+
+label {
+    display: inline-block;
+    width: 140px;
+    font-size: large;
+    margin: 10px 0 10px 0;
+    vertical-align: middle;
+    text-align:left;
+}
+
+input.checkouts {
+  	margin-left: 10px;
+  	float: right;
+}
+
+select:focus, input:focus, textarea:focus {
+    outline-color: #19DDFF;
+}
+
+select.error:focus, input.error:focus, textarea.error:focus {
+    outline-color: black;
+}
+
+label.same_as_shipping {
+  	width: 200px;
+}
+
+fieldset {
+    border: 0;
+}
+
+.cc_info {
+  margin-top: 15px;
+}
+
+.cc_dropdown {
+  margin-left: 140px;
+}
+
+select {
+	margin-right: 15px;
+}
+
+label.zip {
+  	width: 40px;
+  	margin-left: 30px
+  	margin-right: 10px;
+}
+
+#error_line {
+    height: 20px;
+    color: red;
+    font-size: large;
+    font-style: italic;
+    padding-bottom: 0;
+    margin-bottom: 5px;
+}
+
+#dialog_buttons_checkout {
+	text-align: center;
+}
+
+/*=========== order.js =============*/
+
+.item_order {
+  width: 55%;
+  min-width: 570px;
+  height: 100px;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.bottom {
+	border-radius:20px;
+	margin-bottom: 10px;
+}
+
+.checkout_description {
+  	position: relative;
+  	margin-left: 20px;
+  	float: left;
+}
+
+.item_category {
+    font-size: small;
+    color: black;
+    height: 100%;
+}
+
+.checkout_quantities {
+  	position: relative;
+  	float: right;
+}
+
+.quantity_label {
+  	margin-left: 35px;
+}
+
+#change_quantity {
+  position: relative;
+  top: 10px;
+  float: right;
+}
+
+#remove_item {
+  position: relative;
+  top: 10px;
+  float: right;
+}
+
+hr.checkout {
+    margin-top: 70px;
+    width: 55%;
+    margin-left: 15px;
+}
+
+hr.totals {
+  	width: 300px;
+  	margin-top:160px;
+ 	margin-right: 0;
+}
+
+.error {
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+}
+
+.checkout_button {
+  	margin-top: 10px;
+}
+
+/*=========== read_cookie.cgi =============*/
+
+#orderpage {
+	text-align: center;
+	font-size: x-large;
+}
+
+#confirmation {
+	font-size: larger;
+}

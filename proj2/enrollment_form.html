@@ -1,0 +1,230 @@
+<!--    Shah, Urvija    Account:  jadrn046
+        CS545, Fall 2015
+        Project #2
+-->      
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+
+	<title>Enrollment Form</title>
+	<meta http-equiv="content-type" 
+		content="text/html;charset=utf-8" />
+    
+	<link rel="stylesheet" type="text/css" href="main.css" />   
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" ></script>
+	<script type="text/javascript" src="validation.js" ></script>
+
+</head>
+    
+<body>
+	<div id="top_level">
+  		<div class="clear_it"></div>
+    	<img id="image" alt="Happy Days Summer Camp" src="images/1.png" /> 
+    	<h1>Happy Days Summer Camp!!</h1>
+	</div>
+ 
+	<div id="navigation">
+    	<a id="home" href="index.html"> Home</a> &gt; Enrollment 
+	</div> 
+    
+	<div id="container">
+	
+	<form  
+		name="summercamp"
+		action="http://jadran.sdsu.edu/~jadrn000/echo.php"
+		enctype="multipart/form-data"
+        method="post">
+        
+    <h1> Summer Camp Registration </h1>
+    
+    <fieldset>
+        <legend>Program Selection</legend>
+		
+		<label class="title">Program:<span class="required">*</span></label><br /><br />
+		<div id="checkboxes">
+            <input type="checkbox" name="programSelection[]" value="basketball" id="camp1" />
+            <label>Basketball</label>
+            <input type="checkbox" name="programSelection[]" value="baseball" id="camp2" />
+            <label>Baseball</label>
+            <input type="checkbox" name="programSelection[]" value="physical" id="camp3" />
+            <label>Physical Training</label>
+            <input type="checkbox" name="programSelection[]" value="band" id="camp4" />
+            <label>Band Camp</label>
+            <input type="checkbox" name="programSelection[]" value="swimming" id="camp5" />
+            <label>Swimming</label>
+            <input type="checkbox" name="programSelection[]" value="nature" id="camp6" />
+            <label>Nature Discovery</label>
+        </div>   
+    
+    <div id="program_message"> </div> 
+	</fieldset>                  
+    
+<!-- Parent Info:
+	Parent or primary guardian: First, Middle, and Last name
+	Relationship to child: Father, Mother, Guardian
+	Address: two lines for address, plus City, State and Zipcode
+	Home Phone and Cell phone
+	Email address
+-->
+	
+	<fieldset>
+        <legend>Parent/Primary Guardian Information</legend>
+        
+        <ul class="parent_info">
+            <li><label class="title">Name:</label></li>
+            <li><label class="listitem">First Name<span class="required">*</span></label>
+                <input type="text" name="parentfirstname" id="parentfirstname" size="25" /></li>       
+			<li><label class="listitem">Middle Name</label>
+                <input type="text" name="parentmiddlename" id="parentmiddlename" size="25" /></li>  
+ 			<li><label class="listitem">Last Name<span class="required">*</span></label>
+                <input type="text" name="parentlastname" id="parentlastname" size="25" /></li> 
+        </ul>
+     
+        <ul class="parent_info">     
+            <li><label class="title">Relationship to Child:<span class="required">*</span></label>
+                <select name="relationshiptochild" id="relationshiptochild">
+                    <option value="">Select</option>
+                	<option value="Father">Father</option>
+                    <option value="Mother">Mother</option>
+                    <option value="Guardian">Guardian</option>                                 
+                </select>        
+            </li>
+        </ul> 
+                
+        <ul class="parent_info"> 
+            <li><label class="title">Address:</label></li>
+            <li><label class="listitem">Address 1<span class="required">*</span></label>
+           		<input type="text" name="address1" id="address1" size="25" /></li> 
+     		<li><label class="listitem">Address 2</label>
+            	<input type="text" name="address2" id="address2" size="25" /></li>
+            <li><label class="listitem">City<span class="required">*</span></label>
+            	<input type="text" name="city" id="city" size="20" /> </li>
+            <li><label class="listitem">State<span class="required">*</span></label>
+            	<input type="text" name="state" id="state" size="2" maxlength="2" placeholder="CA" /></li>
+            <li><label class="listitem">Zip<span class="required">*</span></label>
+            	<input name="zipcode" id="zipcode" size="5" maxlength="5" /></li>
+        </ul>
+     
+        <ul class="parent_info">   
+            <li><label class="title">Phone Number:</label></li>
+            <li><label class="listitem">Home Phone<span class="required">*</span></label>
+                (<input type="text" name="phone_areacode" size="3" id="homephonearea" maxlength="3" placeholder="xxx"/>)
+                <input type="text" name="phone_prefix" size="3" id="homephoneprefix" maxlength="3" placeholder="xxx"/>
+                <input type="text" name="phone_extension" size="4" id="homephoneextension" maxlength="4" placeholder="xxxx"/>
+            </li>     
+     		<li><label class="listitem">Cell Phone</label>
+                (<input type="text" name="phoneareacode" size="3" id="cellphone" maxlength="3" placeholder="xxx"/>)
+                <input type="text" name="phoneprefix" size="3" maxlength="3" placeholder="xxx"/> 
+                <input type="text" name="phoneextension" size="4" maxlength="4" placeholder="xxxx"/>
+            </li> 
+        </ul>
+     
+        <ul class="parent_info">
+            <li><label class="title">E-Mail: <span class="required">*</span></label>
+                <input type="text" name="emailaddress" id="emailaddress" size="40" /></li>       
+        </ul> 
+
+    <div id="parent_message"> </div>                 
+	</fieldset>
+        
+<!--  Child Info:
+	First, Middle, and Last nane
+	Name the child goes by
+	Photo of a child (upload any image. it doesn't have to be a child)
+	Gender
+	Date of Birth
+	Medical Conditions (use a textarea)
+	Special Dietary Requirements
+-->
+	
+	<fieldset>
+    <legend>Child Information</legend>
+		<ul class="child_info">
+			<li><label class="title">Name:</label></li> 
+            <li><label class="listitem">First Name<span class="required">*</span></label>   
+                <input type="text" name="childfirstname" id="childfirstname" size="25" /></li>
+            <li><label class="listitem">Middle Name</label>
+				<input type="text" name="childmiddlename" id="childmiddlename" size="25" /></li>  
+ 			<li><label class="listitem">Last Name<span class="required">*</span></label>
+                <input type="text" name="childlastname" id="childlastname" size="25" /></li> 
+        </ul>  
+  
+        <ul class="child_info">
+            <li><label class="title">Name the Child goes by:</label>
+                <input type="text" name="nickname" id="nickname" size="30" /></li> 
+        </ul>   
+
+        <ul class="child_info">    
+			<li><label class="title">Photo: <span class="required">*</span></label>
+				<input type="file" name="photoupload" id="photoupload" accept="image/*" /></li>
+        </ul>
+  
+        <ul class="child_info">
+			<li><label class="title">Gender: <span class="required">*</span></label>
+        	<div id="gender">
+				<input type="radio" name="childGender" id="gendermale" value="male" /> Male
+                <input type="radio" name="childGender" id="genderfemale" value="female" /> Female
+            </div>
+            </li>
+        </ul>
+
+        <ul class="child_info">
+            <li><label class="title">Date of Birth: <span class="required">*</span></label></li>
+			<li><label class="listitem">mm</label> 
+                <input type="text" name="birthday_mm" id="mm" size="2" maxlength="2"/> / </li> 
+            <li> <label class="listitem">dd</label> 
+            	<input type="text" name="birthday_dd" id="dd" size="2" maxlength="2"/> / </li> 
+    		<li> <label class="listitem">yyyy</label>
+                <input type="text" name="birthday_yyyy" id="yyyy" size="4" maxlength="4"/></li>
+        </ul>
+     
+        <ul class="child_info">    
+            <li><label class="title">Medical Conditions:</label>
+                <textarea rows="5" cols="80" name="medicalcondition" id="medicalcondition">
+            	</textarea></li>
+ 			<li><label class="title">Special Dietary Requirements:</label>
+                <textarea rows="5" cols="80" name="specialdietaryrequirements" id="specialdietaryrequirements">
+            	</textarea></li>
+        </ul>
+        
+    <div id="child_message"> </div>  
+	</fieldset>   
+
+<!-- Secondary Emergency Contact (name, and phone number) -->
+
+	<fieldset>
+    <legend>Secondary Emergency Contact</legend>
+        <ul class="emergency_info">
+            <li><label class="title">Name: <span class="required">*</span></label></li>    
+            <li><label class="listitem">First Name</label>        
+                <input type="text" name="emergencyfirstname" id="emergencyfirstname" size="25" /></li>
+			<li><label class="listitem">Last name</label>
+                <input type="text" name="emergencylastname" id="emergencylastname" size="25" /></li>
+        </ul>
+     
+        <ul class="emergency_info">     
+            <li><label class="title">Contact: <span class="required">*</span></label></li>
+            <li><label class="listitem">Phone</label>
+                (<input type="text" name="ephone_areacode" size="3" id="ephonearea" maxlength="3" placeholder="xxx"/>)
+                <input type="text" name="ephone_prefix" size="3" id="ephoneprefix" maxlength="3" placeholder="xxx"/>
+                <input type="text" name="ephone_extension" size="4" id="ephoneextension" maxlength="4" placeholder="xxxx"/> 
+            </li> 
+        </ul>
+            
+    <div id="emergency_message"> </div>  
+	</fieldset>   
+       
+    <div id="enrollpagebutton">  
+        <input type="submit" value="Submit" name="submit" class="enrollpagebutton" />
+        <input type="reset" value="Reset" name="reset" class="enrollpagebutton" />
+    </div>   
+     
+	</form> 
+	     
+	</div> 
+</body>
+  
+</html>

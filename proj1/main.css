@@ -1,0 +1,253 @@
+/*    	Shah, Urvija    Account:  jadrn046
+    	CS545, Fall 2015
+        Project #1
+*/      
+
+* {
+    margin: 0; 
+    padding: 0;
+}
+
+html, body {
+    min-width: 900px;
+	height: 97%;
+    background-image: url(images/th5.jpg);
+   	font-family: "Trebuchet MS", Helvetica, Verdana, sans-serif; 
+  	color: #67463B; 
+}    
+    
+h1 {
+    text-align: center;
+    margin: 10px 0 20px 0;
+    padding: 22px 0 22px 0;
+    width: 100%;
+    font-size: 200%;
+}   
+
+h2 {
+    text-align: right;
+    margin-top: 17px;
+    margin-right: 25px;
+    font-size: 150%;
+}   
+
+
+p {
+	padding: 10px 25px 10px 25px; 
+	text-align: justify;
+	line-height: 1.5em;
+	font-size: larger;
+}
+
+/* filter */
+p:first-letter {
+    font-size: 150%;
+    margin-left: 25px;
+}
+  
+hr {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 2px;
+}
+
+#top_level {
+    min-height: 100%;
+    background-color: #AEAEAE;
+	margin: 1% 5% 1% 5%;
+    border-radius: 25px;
+    border: 5px solid #67463B;
+} 
+  
+#navigation ul {
+    text-align: center;
+    margin-bottom: 25px;
+}
+    
+#navigation li {
+    display: inline;
+    margin-left: -1px; 
+    background-color: #67463B;  
+}
+    
+#navigation a {
+    text-decoration: none;
+    padding: 8px 20px 8px 20px;
+    font-weight: bold;
+    border: 2px solid #67473B;
+    color:  #FFF0DA;
+    background-color: #67473B;
+}                 
+
+#navigation a:hover {
+    color:  #67473B;
+    background-color: #FFF0DA;
+}
+
+#footer {
+	margin: 20px;
+	text-align:center;
+}
+
+/*=========== index.html =============*/
+
+#container img {
+	display: block;
+	width: 90%;
+	height: 100%;
+	margin: 0 auto 0 auto;
+	border-radius: 25px;
+}	
+
+.heading {
+	font-size: 300%;
+	padding-top: 25px;
+}
+
+/*=========== history.html =============*/
+
+#history {
+    padding: 25px;
+}
+   
+#history img {
+    float: right;
+    width: 700px;
+ 	margin: 10px 25px 10px 25px;
+    border: 1px solid black;
+	border-radius: 10px;
+}
+
+/*=========== mustsee.html =============*/
+
+#sites {
+    padding: 25px;
+}
+   
+#sites img {
+    float: left;
+    width: 400px;
+ 	margin: 10px 25px 10px 5px;
+    border: 1px solid black;
+	border-radius: 10px;
+}
+
+/* Common to all 5 html pages except index.html*/
+.clear_it {
+    clear: both;
+}
+
+/*=========== art_architecture.html =============*/
+
+#art {
+    padding: 25px;
+}
+
+.right {
+    float: right;
+    width: 400px;
+    height: auto;
+	margin: 10px 5px 10px 50px;
+	border-radius: 10px;
+}
+
+.left {
+    float: left;
+    width: 400px;
+    height: auto;
+ 	margin: 10px 50px 10px 5px;
+	border-radius: 10px;
+}
+
+/*=========== neighborhoods.html =============*/
+
+#neighborhood {
+    padding: 25px;
+}
+
+#neighborhood img {
+	float: right;
+    width: 400px;
+    margin: 10px 5px 10px 25px;
+    border: 1px solid black;
+	border-radius : 10px;
+}
+
+.decoration {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 120%
+}
+
+/*=========== food_restaurnats.html =============*/
+
+#table table {
+    width: 50%;
+    border-spacing: 0;
+    margin: auto;
+    border-collapse: collapse; 
+    margin-top: 30px;	
+}
+  
+#table th {
+    background-color: #555;
+    padding: 10px 10px 10px 10px;
+    color: white;
+    font-size: 20px;
+    text-align: left;
+}
+  
+#table td {
+    padding: 10px 10px 10px 10px; 
+    font-size: 18px;
+}
+
+#table th:first-child  {
+    border-radius: 10px 0 0 0;
+}   
+    
+#table th:last-child  {
+    border-radius: 0 10px 0 0;
+}  
+    
+#table th.last-left  {
+    border-radius: 0  0  0 10px;
+}   
+    
+#table th.last-right  {
+    border-radius: 0 0 10px 0 ;
+}           
+        
+#table tr#bottom {
+    height: 15px;
+}
+    
+#table tr.even {
+    background-color: #AFAAAA;
+}  
+           
+#table tr.odd {
+    background-color: #DDD;
+} 
+
+#food {
+    padding: 25px;
+}
+   
+#food img {
+    float: right;
+    width: 400px;
+ 	margin: 10px 25px 10px 25px;
+    border: 1px solid black;
+	border-radius: 10px;
+}
+
+#table img {
+	display: inline;
+	width: 40px;
+	height: auto;
+	margin: 0 auto 0 auto;
+}
+

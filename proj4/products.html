@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">   
+
+<head>
+	<title>Bertha's Deluxe Chocolates</title>
+	<meta http-equiv="content-type" 
+		content="text/html;charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="main.css" />
+	<link href="jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="ajax_post_lib.js"></script>
+	<script type="text/javascript" src="shopping_cart.js"></script>
+	<script type="text/javascript" src="products.js"></script>
+	
+	<script src="jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+</head>
+
+<body>
+	<div id="top_level">
+		<div id="heading">
+            <h1 id="headingname">Bertha's Deluxe Chocolates</h1>
+		    <div id="counter">
+		    <img src="images/cart.png" alt="cart icon" width= "50px" class="floatright cur_pointer" name="cart_icon" />
+		    <span name="cart_number" class="floatright cart_number"></span></div>
+        </div>
+
+		<div id="navigation">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li id="selected"><a href="products.html">Products</a></li>
+			<li><a href="order_page.html">Order Online</a></li>
+			<li><a href="aboutus.html">About Us</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+		</div>
+ 	</div>
+
+	<div id="container">
+	<div id="productNav"> 
+	<ul id="chocMenu">
+		<li>Milk Chocolate</li>
+		<li>Dark Chocolate</li>
+		<li>Nuts and Chews</li>
+		<li>Brittles and Toffies</li>
+		<li>Truffles</li>
+		<li>Gifts</li>
+		<li>Holiday Assortments</li>
+	</ul>
+	</div>
+
+	<div id="content"> </div>
+	<div id="footer">
+		<a href="products.html"> Top </a> 
+	</div>
+</div>
+
+<div id="dialog-modal" class="widget-dialog-container" title="Add to Cart?">
+    <h5 class="addtocart_dialog" name="addtocart_dialog"></h5>
+	<p class="dialogbox_qty">Quantity:
+	    <select name="quantity">
+	    <option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+		<option value="10">10</option>
+	    </select>
+	</p>
+	
+	<div class="dialogbox_buttons">
+	    <input type="button" value="Cancel" name="cancel_button">
+	    <input type="button" value="Add to Cart" name="addtocart_button">
+	</div>
+</div>
+
+</body>
+</html>

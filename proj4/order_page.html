@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">   
+
+<head>
+	<title>Bertha's Deluxe Chocolates</title>
+	<meta http-equiv="content-type" 
+		content="text/html;charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="main.css" />
+	<link href="jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="ajax_post_lib.js"></script>
+	<script type="text/javascript" src="order.js"></script>
+	<script type="text/javascript" src="shopping_cart.js"></script>
+	
+	<script src="jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+</head>
+
+<body>
+	<div id="top_level">
+		<div id="heading">
+            <h1 id="headingname">Bertha's Deluxe Chocolates</h1>
+		    <div id="counter">
+		    <img src="images/cart.png" alt="cart icon" width= "50px" class="floatright cur_pointer" name="cart_icon" />
+		    <span name="cart_number" class="floatright cart_number"></span></div>
+        </div>
+
+		<div id="navigation">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li id="selected"><a href="products.html">Products</a></li>
+			<li><a href="order_page.html">Order Online</a></li>
+			<li><a href="aboutus.html">About Us</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+		</div>
+ 	</div>
+
+	<div id="container">
+    <div id="content" class="clear_it">
+	    <div id="totals" name="totals"></div>
+	    <div id="items" name="items"></div>
+	    <div class="clear_it">&nbsp;</div>
+	</div>
+    </div>
+	
+    <div id="dialog-modal" class="widget-dialog-container" title="Billing Information">
+	
+	<form method="post" action="/perl/jadrn046/proj4/read_cookie.cgi"> 
+    <div class="floatleft">
+	    <p id="formcolumn"><u>Shipping Address</u></p>
+	    <ul>
+	    <li class="checkout"><label>First Name</label><input type="text" name="first_name" size="20" maxlength="20" /></li>
+	    <li class="checkout"><label>Last Name</label><input type="text" name="last_name" size="20" maxlength="20" /></li>
+	    <li class="checkout"><label>Address</label><input type="text" name="address1" size="20" maxlength="20" /></li>
+	    <li class="checkout"><label></label><input type="text" name="address2" placeholder="apt" size="20" maxlength="20" /></li>
+	    <li class="checkout"><label>City</label><input type="text" name="city" size="20" maxlength="20" /></li>
+	    <li class="checkout"><label>State</label><input type="text" name="state" size="2" maxlength="2" />
+	    	<label class="zip">Zip</label><input type="text" name="zip" size="5" maxlength="5" /></li>
+	    <li class="checkout"><label>Phone</label><input type="text" name="phone" size="20" maxlength="20" placeholder="optional" /></li>
+	    </ul>
+	</div>
+	<div class="floatright">
+	    <p id="formcolumn"><u>Billing Address</u></p>
+	    <ul>
+	    <li class="checkout"><label>First Name</label><input type="text" name="billing_first_name" size="20" maxlength="20" /></li>
+	    <li class="checkout"><label>Last Name</label><input type="text" name="billing_last_name" size="20" maxlength="20" /></li>
+	    <li class="checkout"><label>Address</label><input type="text" name="billing_address1" size="20" maxlength="20" /></li>
+	    <li class="checkout"><label></label><input type="text" name="billing_address2" placeholder="apt" size="20" maxlength="20" /></li>
+	    <li class="checkout"><label>City</label><input type="text" name="billing_city" size="20" maxlength="20" /></li>
+	    <li class="checkout"><label>State</label><input type="text" name="billing_state" size="2" maxlength="2" />
+	    	<label class="zip">Zip</label><input type="text" name="billing_zip" size="5" maxlength="5" /></li>
+	    <li class="checkout"><label>Phone</label><input type="text" name="billing_phone" size="20" maxlength="20" placeholder="optional" /></li>
+	    <li class="checkout"><label class="same_as_shipping">Same as Shipping</label><input type="checkbox" name="same_as_shipping" /></li>
+	    </ul>
+	</div>
+	<div class="clear_it"></div>
+	<div class="floatleft cc_info">
+	    <li class="checkout cc_dropdown">
+	    <select name="credit_cards">
+	    	<option value="0">Visa</option>
+			<option value="1">Mastercard</option>
+			<option value="2">Discover</option>
+			<option value="3">American Express</option>
+	    </select></li>
+	    <li class="checkout"><label>Credit Card</label><input type="text" name="cc_number" size="16" maxlength="16" />
+	    <label class="zip">Exp</label><input type="text" name="expiration1" size="2" maxlength="2" placeholder="MM" />
+	    /<input type="text" name="expiration2" size="4" maxlength="4" placeholder="YYYY" />
+	    </li>
+	</div>
+	
+	<div class="clear_it"></div>
+	
+	<div id="error_line" name="error_line">&nbsp;</div>
+	<div id="dialog_buttons_checkout">
+	    <input type="reset" value="Reset"/>
+	    <input type="button" value="Cancel" name="cancel_button">
+	    <input type="submit" value="Submit Order" name="submit_order_button">
+	</div>
+    </form>
+    </div>
+</body>
+</html>
+	
